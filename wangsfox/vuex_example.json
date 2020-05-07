@@ -1,0 +1,748 @@
+{
+  "request": {
+    "method": "POST",
+    "uri": "http://hansen.loc/api/v1/member/order/change_state",
+    "url": "http://hansen.loc",
+    "path": "/api/v1/member/order/change_state?state_type=order_receive&order_id=6&token=45c48cce2e2d7fbdea1afc51c7c6ad26",
+    "label": "",
+    "auth": "",
+    "httpUser": "",
+    "httpPassword": "",
+    "passwordFieldType": "password",
+    "bearerToken": "",
+    "headers": [],
+    "params": [
+      {
+        "key": "state_type",
+        "value": "order_receive"
+      },
+      {
+        "key": "order_id",
+        "value": "6"
+      },
+      {
+        "key": "token",
+        "value": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+      }
+    ],
+    "bodyParams": [],
+    "rawParams": "{}",
+    "rawInput": false,
+    "requestType": "",
+    "contentType": "application/json"
+  },
+  "gql": {
+    "url": "https://rickandmortyapi.com/graphql",
+    "headers": [],
+    "schema": "",
+    "variablesJSONString": "{ \"id\": \"1\" }",
+    "query": "query charcter($id: ID) {\n  character(id: $id) {\n    id\n    name\n  }\n}",
+    "response": ""
+  },
+  "theme": {
+    "collapsedSections": []
+  },
+  "oauth2": {
+    "tokens": [],
+    "tokenReqs": [],
+    "tokenReqSelect": "",
+    "tokenReqName": "",
+    "accessTokenName": "",
+    "oidcDiscoveryUrl": "",
+    "authUrl": "",
+    "accessTokenUrl": "",
+    "clientId": "",
+    "scope": ""
+  },
+  "postwoman": {
+    "settings": {
+      "URL_EXCLUDES": {
+        "auth": true,
+        "httpUser": true,
+        "httpPassword": true,
+        "bearerToken": true
+      },
+      "THEME_CLASS": "light",
+      "THEME_ACE_EDITOR": "iplastic",
+      "THEME_TAB_COLOR": "#ffffff"
+    },
+    "collections": [
+      {
+        "name": "My Collection",
+        "folders": [],
+        "requests": []
+      },
+      {
+        "name": "hansen",
+        "folders": [
+          {
+            "name": "订单相关",
+            "requests": [
+              {
+                "url": "http://hansen.loc",
+                "path": "/api/v1/member/order/change_state",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "state_type",
+                    "value": "order_receive"
+                  },
+                  {
+                    "key": "order_id",
+                    "value": "6"
+                  },
+                  {
+                    "key": "token",
+                    "value": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "订单状态变更"
+              },
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/member/order/initiate_refund",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "order_id",
+                    "value": "75",
+                    "description": "订单id"
+                  },
+                  {
+                    "key": "goods_id",
+                    "value": "131",
+                    "description": "订单商品id"
+                  },
+                  {
+                    "key": "token",
+                    "value": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "发起退款"
+              },
+              {
+                "url": "",
+                "path": "",
+                "method": "GET",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "提交退款申请"
+              },
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/member/complain/new",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "token",
+                    "value": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+                  },
+                  {
+                    "key": "order_id",
+                    "value": "7"
+                  },
+                  {
+                    "key": "goods_id",
+                    "value": "7"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "发起售后申请"
+              },
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/member/order/submit_refund",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "token",
+                    "value": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+                  },
+                  {
+                    "key": "refund_type",
+                    "value": "1"
+                  },
+                  {
+                    "key": "reason_id",
+                    "value": "1"
+                  },
+                  {
+                    "key": "refund_amount",
+                    "value": "179"
+                  },
+                  {
+                    "key": "buyer_message",
+                    "value": "阿卡开始的"
+                  },
+                  {
+                    "key": "refund_pic1",
+                    "value": null
+                  },
+                  {
+                    "key": "refund_pic2",
+                    "value": null
+                  },
+                  {
+                    "key": "refund_pic3",
+                    "value": null
+                  },
+                  {
+                    "key": "order_id",
+                    "value": "7"
+                  },
+                  {
+                    "key": "goods_id",
+                    "value": "7"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "提交退款申请"
+              },
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/member/complain/save",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "token",
+                    "value": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+                  },
+                  {
+                    "key": "input_order_id",
+                    "value": "7"
+                  },
+                  {
+                    "key": "input_goods_id",
+                    "value": "7"
+                  },
+                  {
+                    "key": "input_complain_subject",
+                    "value": "3,售后保障服务"
+                  },
+                  {
+                    "key": "input_complain_content",
+                    "value": "12321312312"
+                  },
+                  {
+                    "key": "input_complain_pic1",
+                    "value": null
+                  },
+                  {
+                    "key": "input_complain_pic2",
+                    "value": null
+                  },
+                  {
+                    "key": "input_complain_pic3",
+                    "value": null
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "保存售后申请"
+              },
+              {
+                "url": "http://hansen.loc",
+                "path": "/api/v1/member/complain/index",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "state_type",
+                    "value": "order_receive"
+                  },
+                  {
+                    "key": "order_id",
+                    "value": "6"
+                  },
+                  {
+                    "key": "token",
+                    "value": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "我的售后列表"
+              },
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/member/complain/show",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "complain_id",
+                    "value": "7"
+                  },
+                  {
+                    "key": "token",
+                    "value": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "查看售后申请"
+              }
+            ]
+          },
+          {
+            "name": "用户相关",
+            "requests": [
+              {
+                "url": "http://hansen.loc",
+                "path": "/api/v1.Passport/login",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "member_name",
+                    "value": "gmmike"
+                  },
+                  {
+                    "key": "member_password",
+                    "value": "gmmike"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "用户登录"
+              },
+              {
+                "url": "{{hansen_online_v1}}",
+                "path": "/member/identity/index",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "token",
+                    "value": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "实名认证"
+              },
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/member/identity/image_upload",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "token",
+                    "value": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "实名认证 图片上传"
+              },
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/member/identity/image_drop",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "token",
+                    "value": null
+                  },
+                  {
+                    "key": "file_name",
+                    "value": null
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "实名照片删除"
+              },
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/passport/wxlogin",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "code",
+                    "value": "001QkqV21eBtyT18qRR21fjoV21QkqVR"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "微信登录"
+              }
+            ]
+          },
+          {
+            "name": "产品相关",
+            "requests": [
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/mall/goods/search",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "",
+                    "value": ""
+                  },
+                  {
+                    "key": "page",
+                    "value": "4"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "商品列表"
+              },
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/member/order/search",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "token",
+                    "value": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "订单列表"
+              },
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/mall/catalog/catalog_list",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "产品目录"
+              },
+              {
+                "url": "http://hansen.site.anruiweb.com",
+                "path": "/api/v1/mall/goods/detail",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "goods_id",
+                    "value": "140",
+                    "description": "139  121"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "商品详情"
+              },
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/store/goods/goods_all",
+                "method": "POST",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "store_id",
+                    "value": "1"
+                  },
+                  {
+                    "key": "page",
+                    "value": "1"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "商铺内 全部商品"
+              }
+            ]
+          },
+          {
+            "name": "公共功能",
+            "requests": [
+              {
+                "url": "{{hansen_url}}",
+                "path": "/home/connectsms",
+                "method": "GET",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [
+                  {
+                    "key": "sms_mobile",
+                    "value": "177777777777"
+                  },
+                  {
+                    "key": "type",
+                    "value": "1"
+                  }
+                ],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "发送短信验证码"
+              },
+              {
+                "url": "{{hansen_api_v1}}",
+                "path": "/common/get_smstoken",
+                "method": "GET",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "获取短信发送token"
+              },
+              {
+                "url": "",
+                "path": "",
+                "method": "GET",
+                "auth": "",
+                "httpUser": "",
+                "httpPassword": "",
+                "passwordFieldType": "password",
+                "bearerToken": "",
+                "headers": [],
+                "params": [],
+                "bodyParams": [],
+                "rawParams": "",
+                "rawInput": false,
+                "contentType": "",
+                "requestType": "",
+                "name": "发送验证码API"
+              }
+            ]
+          }
+        ],
+        "requests": [],
+        "collectionIndex": 0
+      }
+    ],
+    "environments": [
+      {
+        "name": "My Environment Variables",
+        "variables": [
+          {
+            "key": "hansen_api_v1",
+            "value": "http://hansen.loc/api/v1",
+            "enabled": true
+          },
+          {
+            "key": "hansen_url",
+            "value": "http://hansen.loc",
+            "enabled": true
+          },
+          {
+            "key": "hansen_online_v1",
+            "value": "http://hansen.site.anruiweb.com/api/v1",
+            "enabled": true
+          }
+        ]
+      }
+    ],
+    "editingEnvironment": {},
+    "selectedRequest": {
+      "url": "http://hansen.loc",
+      "path": "/api/v1/member/order/change_state",
+      "method": "POST",
+      "auth": "",
+      "httpUser": "",
+      "httpPassword": "",
+      "passwordFieldType": "password",
+      "bearerToken": "",
+      "headers": [],
+      "params": [
+        {
+          "key": "state_type",
+          "value": "order_receive"
+        },
+        {
+          "key": "order_id",
+          "value": "6"
+        },
+        {
+          "key": "token",
+          "value": "45c48cce2e2d7fbdea1afc51c7c6ad26"
+        }
+      ],
+      "bodyParams": [],
+      "rawParams": "",
+      "rawInput": false,
+      "contentType": "",
+      "requestType": "",
+      "name": "订单状态变更"
+    },
+    "editingRequest": {}
+  },
+  "i18n": {
+    "routeParams": {}
+  }
+}

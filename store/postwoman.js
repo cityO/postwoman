@@ -82,8 +82,24 @@ export const state = () => ({
   ],
   environments: [
     {
-      name: "My Environment Variables",
-      variables: [],
+      name: "hansen_local",
+      variables: [
+        {
+          key: "hansen_api_v1",
+          value: "http://hansen.loc/api/v1",
+          enabled: true,
+        },
+        {
+          key: "hansen_url",
+          value: "http://hansen.loc",
+          enabled: true,
+        },
+        {
+          key: "hansen_online_v1",
+          value: "http://hansen.site.anruiweb.com/api/v1",
+          enabled: true,
+        },
+      ],
     },
   ],
   editingEnvironment: {},
@@ -138,8 +154,8 @@ export const mutations = {
   },
 
   importAddEnvironments(state, { environments, confirmation }) {
-    const duplicateEnvironment = environments.some(item => {
-      return state.environments.some(item2 => {
+    const duplicateEnvironment = environments.some((item) => {
+      return state.environments.some((item2) => {
         return item.name.toLowerCase() === item2.name.toLowerCase()
       })
     })
@@ -170,7 +186,7 @@ export const mutations = {
       environments.length === 1
         ? false
         : environments.some(
-            item =>
+            (item) =>
               item.environmentIndex !== environmentIndex &&
               item.name.toLowerCase() === name.toLowerCase()
           )
@@ -198,7 +214,7 @@ export const mutations = {
   addNewCollection({ collections }, collection) {
     const { name } = collection
     const duplicateCollection = collections.some(
-      item => item.name.toLowerCase() === name.toLowerCase()
+      (item) => item.name.toLowerCase() === name.toLowerCase()
     )
     if (duplicateCollection) {
       this.$toast.info("Duplicate collection")
@@ -221,7 +237,7 @@ export const mutations = {
     const { collection, collectionIndex } = payload
     const { name } = collection
     const duplicateCollection = collections.some(
-      item => item.name.toLowerCase() === name.toLowerCase()
+      (item) => item.name.toLowerCase() === name.toLowerCase()
     )
     if (duplicateCollection) {
       this.$toast.info("Duplicate collection")

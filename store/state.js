@@ -24,11 +24,11 @@ export default () => ({
     schema: "",
     variablesJSONString: '{ "id": "1" }',
     query: `query charcter($id: ID) {
-  character(id: $id) {
-    id
-    name
-  }
-}`,
+      character(id: $id) {
+        id
+        name
+      }
+    }`,
     response: "",
   },
   theme: {
